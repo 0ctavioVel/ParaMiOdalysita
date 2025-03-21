@@ -69,9 +69,12 @@ document.addEventListener("DOMContentLoaded", function () {
             confirmButtonColor: "#ff69b4",
         }).then(() => {
             // Iniciar todas las animaciones después de hacer clic en "Continuar"
+            const backgroundMusic = document.getElementById("background-music");
             animatedElements.forEach(element => {
                 element.style.animationPlayState = 'running';
             });
+            backgroundMusic.volume = 0.5; // Ajusta el volumen
+            backgroundMusic.play();
         });
     });
 });
